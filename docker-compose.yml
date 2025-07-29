@@ -1,0 +1,18 @@
+# Docker Compose for Blog Website
+version: '3.8'
+
+services:
+  blog-website:
+    build: .
+    container_name: my-blog-website
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      # Optional: Mount local files for development
+      # - ./index.html:/usr/share/nginx/html/index.html
+      # - ./styles.css:/usr/share/nginx/html/styles.css
+      # - ./script.js:/usr/share/nginx/html/script.js
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80

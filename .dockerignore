@@ -1,0 +1,10 @@
+# Dockerignore file for blog website
+.git
+.gitignore
+README.md
+.DS_Store
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+docker-compose.yml
